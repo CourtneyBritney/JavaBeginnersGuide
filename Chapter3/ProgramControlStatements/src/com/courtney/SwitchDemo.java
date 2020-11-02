@@ -24,7 +24,6 @@ class SwitchDemo {
                     break;
                 default:
                     System.out.println("i is five or more");
-            }
-
+        }
     }
 }
