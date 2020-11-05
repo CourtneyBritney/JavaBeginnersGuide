@@ -3,7 +3,7 @@ package com.courtney;
 class AccessDemo {
     public static void main(String args[]) {
         MyClass ob = new MyClass();
-  
+
     /* Access to alpha is allowed only through
        its accessor methods. */
         ob.setAlpha(-99);
