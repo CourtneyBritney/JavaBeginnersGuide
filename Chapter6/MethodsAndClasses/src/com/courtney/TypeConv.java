@@ -12,7 +12,7 @@ class TypeConv {
         float f = 11.5F;
 
 
-        ob.f(i); // calls ob.f(int) 
+        ob.f(i); // calls ob.f(int)
         ob.f(d); // calls ob.f(double)
 
         ob.f(b); // calls ob.f(byte) -- now, no type conversion
