@@ -1,9 +1,11 @@
 package com.courtney;
 
-/* Automatic type conversions can affect
-   overloaded method resolution.
-*/
+// Add f(byte).
 class Overload2 {
+    void f(byte x) {
+        System.out.println("Inside f(byte): " + x);
+    }
+
     void f(int x) {
         System.out.println("Inside f(int): " + x);
     }
