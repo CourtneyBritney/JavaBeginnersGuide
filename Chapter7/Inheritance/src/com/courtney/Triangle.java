@@ -5,7 +5,7 @@ class Triangle extends TwoDShape {
     String style;
 
     double area() {
-        return width * height / 2;
+        return width * height / 2; // Error! can't access
     }
 
     void showStyle() {

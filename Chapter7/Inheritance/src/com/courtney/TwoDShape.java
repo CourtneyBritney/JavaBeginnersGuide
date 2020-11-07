@@ -1,11 +1,13 @@
 package com.courtney;
 
-// A simple class hierarchy.
+// Private members are not inherited.
+
+// This example will not compile.
 
 // A class for two-dimensional objects.
 class TwoDShape {
-    double width;
-    double height;
+    private double width;  // these are
+    private double height; // now private
 
     void showDim() {
         System.out.println("Width and height are " +
