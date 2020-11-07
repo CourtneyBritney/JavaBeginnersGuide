@@ -1,13 +1,21 @@
 package com.courtney;
 
-// Private members are not inherited.
-
-// This example will not compile.
-
-// A class for two-dimensional objects.
+// Add constructors to TwoDShape.
 class TwoDShape {
-    private double width;  // these are
-    private double height; // now private
+    private double width;
+    private double height;
+
+    // Parameterized constructor.
+    TwoDShape(double w, double h) {
+        width = w;
+        height = h;
+    }
+
+    // Accessor methods for width and height.
+    double getWidth() { return width; }
+    double getHeight() { return height; }
+    void setWidth(double w) { width = w; }
+    void setHeight(double h) { height = h; }
 
     void showDim() {
         System.out.println("Width and height are " +

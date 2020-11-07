@@ -2,10 +2,16 @@ package com.courtney;
 
 // A subclass of TwoDShape for triangles.
 class Triangle extends TwoDShape {
-    String style;
+    private String style;
+
+    Triangle(String s, double w, double h) {
+        super(w, h); // call superclass constructor
+
+        style = s;
+    }
 
     double area() {
-        return width * height / 2; // Error! can't access
+        return getWidth() * getHeight() / 2;
     }
 
     void showStyle() {
