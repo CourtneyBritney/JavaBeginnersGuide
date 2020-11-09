@@ -12,14 +12,14 @@ class Triangle extends TwoDShape {
 
     // Constructor for Triangle.
     Triangle(String s, double w, double h) {
-        super(w, h); // call superclass constructor
+        super(w, h, "triangle");
 
         style = s;
     }
 
     // One argument constructor.
     Triangle(double x) {
-        super(x); // call superclass constructor
+        super(x, "triangle"); // call superclass constructor
 
         style = "filled";
     }
@@ -30,6 +30,7 @@ class Triangle extends TwoDShape {
         style = ob.style;
     }
 
+    // Override area() for Triangle.
     double area() {
         return getWidth() * getHeight() / 2;
     }
