@@ -1,8 +1,10 @@
 package com.courtney;
 
-// Method overriding.
+/* Methods with differing type signatures are
+   overloaded and not overridden. */
 class A {
     int i, j;
+
     A(int a, int b) {
         i = a;
         j = b;
@@ -14,6 +16,7 @@ class A {
     }
 }
 
+// Create a subclass by extending class A.
 class B extends A {
     int k;
 
@@ -22,8 +25,8 @@ class B extends A {
         k = c;
     }
 
-    // display k – this overrides show() in A
-    void show() {
-        System.out.println("k: " + k);
+    // overload show()
+    void show(String msg) {
+        System.out.println(msg + k);
     }
 }
