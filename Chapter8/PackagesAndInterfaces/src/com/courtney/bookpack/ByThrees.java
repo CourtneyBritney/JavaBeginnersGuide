@@ -1,18 +1,16 @@
 package com.courtney.bookpack;
 
-// Demonstrate interface references.
-
-class ByTwos implements Series {
+class ByThrees implements Series {
     int start;
     int val;
 
-    ByTwos() {
+    ByThrees() {
         start = 0;
         val = 0;
     }
 
     public int getNext() {
-        val += 2;
+        val += 3;
         return val;
     }
 
