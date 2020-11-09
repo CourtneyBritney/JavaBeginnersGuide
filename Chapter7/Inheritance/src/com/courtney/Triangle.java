@@ -1,6 +1,6 @@
 package com.courtney;
 
-// A subclass of TwoDShape for triangles.
+// Extend TwoDShape.
 class Triangle extends TwoDShape {
     private String style;
 
@@ -10,7 +10,6 @@ class Triangle extends TwoDShape {
         style = "none";
     }
 
-    // Constructor
     Triangle(String s, double w, double h) {
         super(w, h); // call superclass constructor
 

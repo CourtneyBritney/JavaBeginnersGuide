@@ -1,6 +1,6 @@
 package com.courtney;
 
-// Add more constructors to TwoDShape.
+// A multilevel hierarchy.
 class TwoDShape {
     private double width;
     private double height;
