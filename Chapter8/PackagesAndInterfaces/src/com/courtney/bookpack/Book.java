@@ -1,20 +1,19 @@
 package com.courtney.bookpack;
 
-// Book recoded for public access.
+// Variables are protected
 
 public class Book {
-    private String title;
-    private String author;
-    private int pubDate;
+    // these are now protected
+    protected String title;
+    protected String author;
+    protected int pubDate;
 
-    // Now public.
     public Book(String t, String a, int d) {
         title = t;
         author = a;
         pubDate = d;
     }
 
-    // Now public.
     public void show() {
         System.out.println(title);
         System.out.println(author);
