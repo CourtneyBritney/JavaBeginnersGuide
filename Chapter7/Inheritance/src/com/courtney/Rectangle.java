@@ -27,7 +27,6 @@ class Rectangle extends TwoDShape {
         return false;
     }
 
-    // Override area() for Rectangle.
     double area() {
         return getWidth() * getHeight();
     }

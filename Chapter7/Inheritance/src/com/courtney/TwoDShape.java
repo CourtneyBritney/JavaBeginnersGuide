@@ -1,7 +1,7 @@
 package com.courtney;
 
-// Use dynamic method dispatch.
-class TwoDShape {
+// Create an abstract class.
+abstract class TwoDShape {
     private double width;
     private double height;
     private String name;
@@ -45,8 +45,6 @@ class TwoDShape {
                 width + " and " + height);
     }
 
-    double area() {
-        System.out.println("area() must be overridden");
-        return 0.0;
-    }
+    // Now, area() is abstract.
+    abstract double area();
 }

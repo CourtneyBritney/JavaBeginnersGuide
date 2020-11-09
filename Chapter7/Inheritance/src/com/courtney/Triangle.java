@@ -17,7 +17,7 @@ class Triangle extends TwoDShape {
         style = s;
     }
 
-    // One argument constructor.
+    // One argument constructor
     Triangle(double x) {
         super(x, "triangle"); // call superclass constructor
 
@@ -30,7 +30,6 @@ class Triangle extends TwoDShape {
         style = ob.style;
     }
 
-    // Override area() for Triangle.
     double area() {
         return getWidth() * getHeight() / 2;
     }
