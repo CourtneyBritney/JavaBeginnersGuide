@@ -1,18 +1,20 @@
 package com.courtney;
 
-// Use join().
-
 class MyThread implements Runnable {
     Thread thrd;
+    static SumArray sa = new SumArray();
+    int a[];
+    int answer;
 
     // Construct a new thread.
-    MyThread(String name) {
+    MyThread(String name, int nums[]) {
         thrd = new Thread(this, name);
+        a = nums;
     }
 
     // A factory method that creates and starts a thread.
-    public static MyThread createAndStart(String name) {
-        MyThread myThrd = new MyThread(name);
+    public static MyThread createAndStart(String name, int nums[]) {
+        MyThread myThrd = new MyThread(name, nums);
 
         myThrd.thrd.start(); // start the thread
         return myThrd;
@@ -20,17 +22,14 @@ class MyThread implements Runnable {
 
     // Entry point of thread.
     public void run() {
+        int sum;
+
         System.out.println(thrd.getName() + " starting.");
-        try {
-            for(int count=0; count < 10; count++) {
-                Thread.sleep(400);
-                System.out.println("In " + thrd.getName() +
-                        ", count is " + count);
-            }
-        }
-        catch(InterruptedException exc) {
-            System.out.println(thrd.getName() + " interrupted.");
-        }
+
+        answer = sa.sumArray(a);
+        System.out.println("Sum for " + thrd.getName() +
+                " is " + answer);
+
         System.out.println(thrd.getName() + " terminating.");
     }
 }
