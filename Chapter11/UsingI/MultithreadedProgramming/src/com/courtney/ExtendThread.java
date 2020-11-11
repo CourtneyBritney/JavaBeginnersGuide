@@ -6,7 +6,7 @@ class ExtendThread {
 
         MyThread mt = new MyThread("Child #1");
 
-        mt.start();
+        //mt.start();
 
         for(int i=0; i < 50; i++) {
             System.out.print(".");
