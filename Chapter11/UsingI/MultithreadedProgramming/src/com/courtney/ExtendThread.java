@@ -1,10 +1,12 @@
 package com.courtney;
 
-class ThreadVariations {
+class ExtendThread {
     public static void main(String args[]) {
         System.out.println("Main thread starting.");
 
-        //MyThread mt = MyThread.createAndStart("Child #1");
+        MyThread mt = new MyThread("Child #1");
+
+        mt.start();
 
         for(int i=0; i < 50; i++) {
             System.out.print(".");

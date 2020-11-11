@@ -1,41 +1,32 @@
 package com.courtney;
 
-// MyThread variations. This version of MyThread
-// creates a Thread when its constructor is called and
-// stores it in an instance variable called thrd.
-// It also sets the name of the thread and provides
-// a factory method to create and start a thread.
+/*
+   Try This 11-1
 
-class MyThread implements Runnable {
-    Thread thrd;
+   Extend Thread.
+*/
+class MyThread extends Thread {
 
-    // Construct a new thread using this Runnable and give
-    // it a name.
+    // Construct a new thread.
     MyThread(String name) {
-        thrd = new Thread(this, name);
+        super(name); // name thread
     }
 
-    // A factory method that creates and starts a thread.
-    public static MyThread createAndStart(String name) {
-        MyThread myThrd = new MyThread(name);
-
-        myThrd.thrd.start(); // start the thread
-        return myThrd;
-    }
 
     // Entry point of thread.
     public void run() {
-        System.out.println(thrd.getName() + " starting.");
+        System.out.println(getName() + " starting.");
         try {
-            for(int count=0; count<10; count++) {
+            for(int count=0; count < 10; count++) {
                 Thread.sleep(400);
-                System.out.println("In " + thrd.getName() +
+                System.out.println("In " + getName() +
                         ", count is " + count);
             }
         }
         catch(InterruptedException exc) {
-            System.out.println(thrd.getName() + " interrupted.");
+            System.out.println(getName() + " interrupted.");
         }
-        System.out.println(thrd.getName() + " terminating.");
+
+        System.out.println(getName() + " terminating.");
     }
 }
